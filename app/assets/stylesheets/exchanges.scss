@@ -1,5 +1,5 @@
 body {
-  background: image-url("/background-img.jpg") no-repeat center center fixed;
+  background: image-url("/mundo_mapa.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -13,6 +13,11 @@ body {
 
 .title-box{
   margin-top: 20%;
+  background-color: rgba(245,245,245,0.3);
+  height: 100px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: -2px 2px 25px rgba(245,245,245,0.4);
 
   .title{
     color: white;
@@ -31,6 +36,7 @@ body {
 
 .exchange_box{
   margin: 10px auto;
+
   .logo-box{
     margin: 0 auto;
     padding-bottom: 10px;
