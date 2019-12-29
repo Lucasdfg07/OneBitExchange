@@ -15,7 +15,7 @@ $(document).ready ->
                   amount: $("#amount").val()
                 }
           error: (jqXHR, textStatus, errorThrown) ->
-            alert textStatus
+            alert textStatus 
           success: (data, text, jqXHR) ->
             $('#result').val(data.value)
         return false;
