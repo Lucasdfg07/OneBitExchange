@@ -16,7 +16,7 @@ RSpec.configure do |config|
         ]
       }', headers: {})
 
-      stub_request(:get, /blockchain.info/ )
+      stub_request(:get, /blockchain.info/tobtc/ )
       .with(headers: {
         'Accept'=>'*/*'
       }).to_return(status: 200, body: '
@@ -25,11 +25,7 @@ RSpec.configure do |config|
           "currency": [
               {
                   "currency": "USD",
-                  "15m": 7201.28,
-                  "last": 7201.28,
-                  "buy": 7201.28,
-                  "sell": 7201.28,
-                  "symbol": "$"
+                  "value": 2000
               }
           ]
         }', headers: {})

@@ -9,15 +9,10 @@ class BitcoinService
 
   def perform
     begin
-      base_url = "currency=#{@source_currency}/#{@target_currency}"
+      base_url = "https://blockchain.info/tobtc?currency=#{@target_currency}&value=#{@amount}"
       response = RestClient.get base_url
-      data = JSON.load response
-      cool = data[@target_currency]
-      value = JSON.pretty_generate cool["last"]
+      value = JSON.parse(response.body)
 
-      @numero = value.to_f
-
-      @numero * @amount
     rescue RestClient::ExceptionWithResponse => e
       e.response
     end
