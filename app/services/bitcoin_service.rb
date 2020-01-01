@@ -9,11 +9,11 @@ class BitcoinService
 
   def perform
     begin
-      base_url = "http://blockchain.info/ticker"
+      base_url = "currency=#{@source_currency}/#{@target_currency}"
       response = RestClient.get base_url
       data = JSON.load response
       cool = data[@target_currency]
-      value = JSON.pretty_generate cool
+      value = JSON.pretty_generate cool["last"]
 
       @numero = value.to_f
 
