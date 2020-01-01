@@ -13,7 +13,7 @@ class BitcoinService
       response = RestClient.get base_url
       data = JSON.load response
       cool = data[@target_currency]
-      value = JSON.pretty_generate cool["last"]
+      value = JSON.pretty_generate cool
 
       @numero = value.to_f
 
