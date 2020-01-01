@@ -1,5 +1,11 @@
 <div class='container'>
   <div class='row main'>
+    <div class='col-lg-10 offset-lg-1 hidden-sm-down title-box text-center'>
+        <h2 class='subtitle'>Converta facilmente qualquer Moeda</h2>
+
+        <h3 class='subtitle'>Para qualquer moeda no Mundo!</h3>
+    </div>
+
     <div class='col-lg-3 offset-lg-1 col-md-10 offset-md-1 exchange_box'>
       <div class='row'>
           <div class='col-md-8 offset-md-2 text-sm-center'>
@@ -12,10 +18,10 @@
       </div>
     </div>
 
-    <div class='col-lg-7 offset-lg-1 hidden-sm-down title-box text-center'>
-        <h2 class='subtitle'>Converta facilmente qualquer Moeda</h2>
-
-        <h3 class='subtitle'>Para qualquer moeda no Mundo!</h3>
+    <div class='col-lg-5 offset-lg-1 col-md-10 offset-md-1 exchange_box'>
+      <div class='row'>
+        <%= render 'bitcoins/bitcoin_box' %>
+      </div>
     </div>
   </div>
 </div>
