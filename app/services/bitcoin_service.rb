@@ -16,7 +16,7 @@ class BitcoinService
       value = JSON.pretty_generate cool["last"]
 
       @numero = value.to_f
-      
+
       @numero * @amount
     rescue RestClient::ExceptionWithResponse => e
       e.response
