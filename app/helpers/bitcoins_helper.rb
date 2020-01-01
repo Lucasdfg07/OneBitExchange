@@ -1,0 +1,2 @@
+module BitcoinsHelper
+end

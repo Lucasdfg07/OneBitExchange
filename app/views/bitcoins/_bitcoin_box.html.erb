@@ -1,0 +1,40 @@
+<div class='bitcoin_box col-sm-12'>
+  <div class='card'>
+
+    <div class='card-header text-center'>
+      Simule sua conversão em Bitcoin
+    </div>
+
+    <div class='card-block'>
+      <%= form_tag('/bitcoins', method: :get, id: 'bitcoins_form') do %>
+        <div class="row">
+          <div class='local_currency col-md-6'>
+            <div class='form-group'>
+              <p class='title'>Moeda Local</p>
+              <%= select_tag 'source_currency', options_for_select(currency_list, 'BTC'), class: 'form-control', id: 'source_currency_btc', disabled: true%>
+            </div>
+
+            <div class='form-group'>
+              <input type='number' name='amount_btc' id='amount_btc' class='form-control' placeholder='Quantidade ($10)' step='any' required>
+            </div>
+          </div>
+
+          <div class='destination_currency col-md-6'>
+            <div class='form-group'>
+              <p class='title'>Moeda Pretendida</p>
+              <%= select_tag 'target_currency', options_for_select(currency_list, 'BRL'), class: 'form-control', id: 'target_currency_btc' %>
+            </div>
+            <div class='form-group'>
+              <input type='text' id='result_btc' name='result_btc' class='form-control' placeholder='Resultado' readonly>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <!-- <button type='submit' class='btn btn-primary btn-exchange col-md-12'>CONVERTER</button> -->
+          <button type='button' class='btn btn-warning col-md-12' id="btn-troca_btc">INVERTER MOEDAS</button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

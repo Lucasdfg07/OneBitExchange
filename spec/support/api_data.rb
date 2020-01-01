@@ -15,5 +15,23 @@ RSpec.configure do |config|
             }
         ]
       }', headers: {})
+
+      stub_request(:get, /blockchain.info/ )
+      .with(headers: {
+        'Accept'=>'*/*'
+      }).to_return(status: 200, body: '
+        {
+          "status": true,
+          "currency": [
+              {
+                  "currency": "USD",
+                  "15m": 7201.28,
+                  "last": 7201.28,
+                  "buy": 7201.28,
+                  "sell": 7201.28,
+                  "symbol": "$"
+              }
+          ]
+        }', headers: {})
   end
 end
